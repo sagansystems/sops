@@ -16,7 +16,6 @@ steps:
     registry: gladly
     tags:
       - ${{CF_BRANCH_TAG_NORMALIZED}}
-      - ${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}
 
   tag_latest:
     type: push
