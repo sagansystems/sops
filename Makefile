@@ -8,6 +8,9 @@ GOLINT 		:= golint
 
 all: test vet generate install functional-tests
 
+build:
+	GOOS=linux CGO_ENABLED=0 go build -o dist/sops-linux go.mozilla.org/sops/cmd/sops
+
 install:
 	$(GO) install go.mozilla.org/sops/cmd/sops
 
